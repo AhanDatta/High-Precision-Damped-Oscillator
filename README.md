@@ -1,2 +1,5 @@
 # High Precision Damped Oscilator
- 
+This project simulates a damped oscillator in Rust, writes to an excel file, and displays the results in Python using Matplotlib. The differential equation solver used here uses a fourth-order Adams-Bashforth algorithm (Read more here: fncbook.github.io/fnc/ivp/multistep.html). In short, it uses a weighted sum of the four previous data points to make a better prediction of the next step, and it does that twice for each first order differential equations in the system (acceleration -> velocity and velocity -> position). This makes a very accurate approximation of the solution. The included files show the approximate solution for the classic damped harmonic oscillator with a linear damping term. This can be run, however, with an arbitrary damping force. I hope you find this useful. Enjoy!
+
+ USAGE:
+ First run the Rust program, tuning the constants and damping force to your liking. Then, making sure that the constants are the same in the Python file as in the Rust file, run the Python file to graph the data from excel.
